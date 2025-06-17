@@ -4,7 +4,7 @@
 name: Publish
 
 on:
-  workflow_call:
+  workflow_dispatch:
     inputs:
       tag:
         description: 'A tag used for release'
