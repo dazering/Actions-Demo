@@ -32,7 +32,7 @@ jobs:
     - name: Publish Linux
       run: dotnet publish ./ActionsDemo/ActionsDemo.csproj --self-contained true -c Release -p:PublishSingleFile=true -o ./publish/linux --os linux
     - name: Publish Win
-      run: dotnet publish ./ActionsDemo/ActionsDemo.csproj --self-contained true -c Release -p:PublishSingleFile=true -o ./publish/win --os win-x64
+      run: dotnet publish ./ActionsDemo/ActionsDemo.csproj --self-contained true -c Release -p:PublishSingleFile=true -o ./publish/win --os win
     - name: Upload binaries to release
       uses: svenstaro/upload-release-action@v2
       with:
