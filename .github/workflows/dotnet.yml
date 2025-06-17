@@ -36,4 +36,4 @@ jobs:
     - name: Upload binaries to release
       run: gh release upload ${{ inputs.tag }} ./publish/linux/* ./publish/linux/*
       env:
-        GH_TOKEN: ${{ github.GITHUB_TOKEN }}
+        GH_TOKEN: ${{ github.token }}
