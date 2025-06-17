@@ -29,6 +29,8 @@ jobs:
       run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
+    - name: List files
+      run: ls -la
     - name: Publish Linux
       run: dotnet publish .\ActionsDemo\ActionsDemo.csproj --self-contained true -c Release -p:PublishSingleFile=true -o ./publish/linux --os linux
     - name: Publish Win
