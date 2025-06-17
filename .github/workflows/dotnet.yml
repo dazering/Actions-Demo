@@ -35,3 +35,5 @@ jobs:
       run: dotnet publish ./ActionsDemo/ActionsDemo.csproj --self-contained true -c Release -p:PublishSingleFile=true -o ./publish/win --os win
     - name: Upload binaries to release
       run: gh release upload ${{ inputs.tag }} ./publish/linux/* ./publish/linux/*
+      env:
+        GH_TOKEN: ${{ github.token }}
